@@ -1,0 +1,137 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Two Columns layout with Header</title>
+		<style type="text/css">
+			@import url('../css/reset.css') media all;
+		</style>
+		<style type="text/css">
+
+			/************************************************************************
+			 * http://matthewjamestaylor.com/blog/equal-height-columns-2-column.htm
+			 ************************************************************************/
+
+			html{
+				height: 100%;
+			}
+
+			body{
+				height: 100%;
+				font-family: Verdana;
+				padding: 0;
+				margin:0;
+			}
+			
+			/*********
+			 * Header
+			 *********/
+			header{
+				height: 50px;
+				position: relative;
+				z-index: 1000;
+				background: White;
+			}
+			header h1{
+				padding: 0;
+				margin: 0;
+				font-size: 18px;
+			}
+			
+			/******
+			 * Nav
+			 ******/
+			nav ul{
+				margin-top: 10px;
+				font-size: 12px;
+			}
+			nav ul li{
+				display: inline-block;
+			}
+			
+			/*******
+			 * Main
+			 *******/
+			main{
+				background: yellow;
+				height: 100%;
+				position: relative;
+				margin-top: -50px;
+			}
+			
+			/**********
+			 * Columns
+			 **********/
+			.col{
+				width: 50%;
+				float: left;
+				color: grey;
+				height: 100%;
+				position: relative;
+				overflow: visible
+			}
+			#colLeft{
+				background: purple;
+				left: 50%;
+			}
+			#colRight{
+				background: black;
+				left: 50%;
+			}
+			.containerLeft{
+				background: purple;
+				width: 100%;
+				position: relative;
+				right: 50%;
+				min-height: 100%;
+				float:left;
+			}
+			.containerRight{
+				clear: left;
+				float: left;
+				background: black;
+				width: 100%;
+				height: 100%;
+			}
+			.paddingContainer{
+				padding-top: 50px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/details.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Two Columns Layout with Header</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Dummy Link 1</a></li>
+					<li><a href="#">Dummy Link 2</a></li>
+					<li><a href="#">Dummy Link 3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="containerRight">
+				<div class="containerLeft">
+					<div class="paddingContainer">
+						<div id="colLeft" class="col">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum sapien quis risus dictum consequat id vel enim. Mauris id viverra diam. Sed eu felis vel elit bibendum tempus non laoreet massa. In hac habitasse platea dictumst. Aliquam efficitur varius diam vitae iaculis. Donec risus mi, varius in lobortis quis, interdum tincidunt est. Duis purus arcu, finibus id pharetra a, scelerisque in augue. Maecenas mauris urna, efficitur sit amet bibendum ut, dictum id leo. Nullam ut varius urna. Nunc fermentum felis vitae tortor molestie tincidunt nec non magna. Vivamus dignissim ligula ac diam tempor, eu suscipit libero aliquam.</p>
+						</div>
+						<div id="colRight" class="col">
+							<p>Maecenas cursus vel est eu pellentesque. Integer mollis vestibulum lectus, sit amet vehicula sapien efficitur non. Ut et cursus neque, et pharetra magna. In hac habitasse platea dictumst. Nullam finibus odio nec diam pharetra vehicula. Aenean nec mi consequat, pretium mauris vitae, pellentesque ipsum. Integer porttitor ligula quis suscipit laoreet. Sed magna sem, fermentum id fringilla at, malesuada non justo. Nam et purus scelerisque, tincidunt libero ac, vehicula tortor.</p><p>Maecenas cursus vel est eu pellentesque. Integer mollis vestibulum lectus, sit amet vehicula sapien efficitur non. Ut et cursus neque, et pharetra magna. In hac habitasse platea dictumst. Nullam finibus odio nec diam pharetra vehicula. Aenean nec mi consequat, pretium mauris vitae, pellentesque ipsum. Integer porttitor ligula quis suscipit laoreet. Sed magna sem, fermentum id fringilla at, malesuada non justo. Nam et purus scelerisque, tincidunt libero ac, vehicula tortor.</p>
+							<details>
+								<summary>Add More Content</summary>
+								<div class="detailsContent">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum sapien quis risus dictum consequat id vel enim. Mauris id viverra diam. Sed eu felis vel elit bibendum tempus non laoreet massa. In hac habitasse platea dictumst. Aliquam efficitur varius diam vitae iaculis. Donec risus mi, varius in lobortis quis, interdum tincidunt est. Duis purus arcu, finibus id pharetra a, scelerisque in augue. Maecenas mauris urna, efficitur sit amet bibendum ut, dictum id leo. Nullam ut varius urna. Nunc fermentum felis vitae tortor molestie tincidunt nec non magna. Vivamus dignissim ligula ac diam tempor, eu suscipit libero aliquam.
+										Maecenas cursus vel est eu pellentesque. Integer mollis vestibulum lectus, sit amet vehicula sapien efficitur non. Ut et cursus neque, et pharetra magna. In hac habitasse platea dictumst. Nullam finibus odio nec diam pharetra vehicula. Aenean nec mi consequat, pretium mauris vitae, pellentesque ipsum. Integer porttitor ligula quis suscipit laoreet. Sed magna sem, fermentum id fringilla at, malesuada non justo. Nam et purus scelerisque, tincidunt libero ac, vehicula tortor.
+										Quisque iaculis massa et velit molestie rutrum. Quisque in nulla sed urna suscipit convallis tempus ut libero. Quisque neque lacus, malesuada vel orci vitae, pellentesque bibendum sapien. Praesent quis mollis leo. Sed consectetur est enim, vitae vulputate lectus volutpat sit amet. Etiam eu neque nec enim gravida ultrices id id augue. Duis at feugiat erat. Nam porttitor condimentum faucibus. Praesent ut eros vulputate, consectetur risus at, congue turpis. Praesent mi ante, posuere quis varius sagittis, congue ac urna. Vivamus diam sem, iaculis nec bibendum id, pellentesque sit amet mi. Ut eu diam eget purus tristique bibendum non sit amet odio. Duis a lacinia lectus. Ut vel eleifend urna.
+										Donec vitae neque ac nisl pharetra mollis eu vel ligula. Cras commodo sapien mollis pharetra tempor. Morbi consectetur, massa gravida gravida gravida, purus metus commodo ligula, nec semper lacus mi eu ligula. Donec maximus mauris id ullamcorper lobortis. In hac habitasse platea dictumst. Morbi viverra vitae odio nec consequat. Aenean a enim porttitor, tincidunt nunc vitae, tristique dolor.
+										Aliquam iaculis viverra ligula in pulvinar. Vestibulum bibendum arcu finibus dolor cursus, eget cursus arcu pharetra. Aliquam pharetra sed quam et varius. Curabitur blandit ullamcorper tortor, vel scelerisque eros consequat a. Vivamus sed aliquet felis. Ut mauris turpis, pellentesque ut purus vel, viverra molestie enim. Nam luctus, sem eget mattis blandit, velit elit tincidunt turpis, ac faucibus neque purus id felis. Morbi dignissim volutpat ipsum, eu iaculis odio tincidunt nec.</p>
+								</div>
+							</details>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

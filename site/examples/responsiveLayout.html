@@ -1,0 +1,377 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Responsive Layout #01</title>
+		<meta name="description" content="A responsive design using html and css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+			@import url('css/reset.css');
+			@font-face{
+				font-family : specialfont;
+				src: url('fonts/NTAILU.TTF');
+			}
+			@font-face{
+				font-family : specialfontbold;
+				src: url('fonts/NTAILUB.TTF');
+			
+			}
+			
+			/***************************************
+				COMMON STYLE DECLARATIONS
+			****************************************/
+			#contentContainer{
+					background: #c3e86c;
+			}
+			.cornerTopLeft{
+				background : url('img/cornerTopLeft.jpg') no-repeat 0 0;
+			}
+			.cornerTopRight{
+				background : url('img/cornerTopRight.jpg') no-repeat 100% 0;
+			}
+			.cornerBottomRight{
+				background : url('img/cornerBottomRight.jpg') no-repeat 100% 100%;
+			}
+			.cornerBottomLeft{
+				background : url('img/cornerBottomLeft.jpg') no-repeat 0 100%;
+			}
+			#content{
+				background: White;
+				padding: 23px;
+				font-family: specialfont;
+			}
+			.contentMargin{
+				padding: 19px;
+				margin-bottom: 20px;
+			}
+		
+			/********************************
+					FULL SIZE STYLES	
+			*********************************/
+			@media screen and (min-width: 737px){
+			
+				html{
+					height: 100%:
+				}
+				body{
+					height: 100%;
+					min-width : 737px;
+				}				
+			
+				
+				/************************
+				* HEADER and NAVigation
+				*************************/
+				header {
+					background: #c4e86c;
+					height: 137px;
+				}
+				
+				nav, #subnav, #container ul{
+					font-family : specialfontbold;
+				}
+				
+				nav a{
+					color: #fc5474;
+					text-decoration: none;
+					font-size: 22px;
+				}
+				nav ul{
+					margin-left: 45%;
+					margin-top: -30px;
+				}
+				nav ul li{
+					display:inline;
+					margin-right: 23px;
+				}
+				
+				/******************
+					MAIN structure
+				*******************/
+				main{
+				
+					position: relative;
+				
+				}
+				main p {
+					padding-bottom: 50px;
+				}
+				
+				/************************
+					Two columns Layout
+				*************************/
+				#columnRightContainer{
+					background: White;
+					position: relative;
+					float: left;
+					clear: left;
+					width: 100%;
+					height: 100%;
+				}
+				
+				#columnLeftContainer{
+					background: #fc5474;
+					min-height: 100%;
+					position: relative;
+					float: left;
+					width: 100%;
+				}
+				
+				#colLeft{
+					background: #fc5474;
+					width: 15%;
+					min-width: 108px;
+					height: 100%;
+					position: relative;
+					overflow: visible;
+					float: left;
+					
+				}
+				
+				#colRight{
+					background: White;
+					float: left;
+					left: 50%;
+					width: 85%;
+				}
+				
+				
+				/***********************
+					SUBNAVigation
+				************************/
+				
+				#subnav a{
+					color: #c4e86c;
+					text-decoration: none;
+				}
+				
+				#subnav{
+					background: #fc5474;
+					min-width: 108px;
+					height: 100%;
+					position: relative;
+					overflow: visible;
+					
+				}
+				#subnav ul{
+					margin-top: 25px;
+					margin-left: 18px;
+				}
+				#subnav ul li{
+					margin-bottom: 31px;
+				}
+				
+				
+				/*********************
+					MAIN CONTENT
+				**********************/				
+				#container {
+					margin: 36px 71px 0 71px;
+				}
+				
+				
+				
+				/*******************
+						TABS
+				********************/
+				#tabs{
+					text-align: right;
+					margin-right: 30px;
+				}
+				
+				#tabs li{
+					display: inline-block;
+					background: #c4e86c url(img/tabCornerLeft.jpg) no-repeat 0 0;
+				}
+				#tabs li span{
+					background: url('img/tabCornerRight.jpg') no-repeat 100% 0;
+					padding: 12px 0;
+					display: block;
+				}
+				#tabs li a, 
+				#tabs li a:visited{
+					color: #fc5474;
+					text-decoration: none;
+						padding: 12px 23px;
+				
+				}
+				
+				
+				
+			}
+			
+			/************************************
+					SMALLER STYLES
+			*************************************/			
+			@media screen and (max-width: 737px){
+				
+				/***************
+					HEADER
+				****************/
+				header{
+					background: #c4e86c;
+				}
+				header #logo img{
+					display: none;
+				}
+				header #logo {
+					background: url('img/headerSmall.jpg') no-repeat 0 0;
+					height: 50px;
+					width: 208px;
+					margin-left: 66px;				
+				}
+				
+				/********************
+					NAVIGATION
+				*********************/
+				#navContainer{
+					background: url('img/menuButton.jpg') no-repeat 0 0;
+					margin-top: -50px;
+					float: left;
+					height: 50px;
+					width: 65px;
+				}
+				#navContainer:hover nav{
+					display: block;
+				}
+				nav{
+					background: #c4e86c;
+					float: left;
+					text-align: right;
+					width: 30%;
+					position: absolute;
+					display:none;
+					margin-top: 45px;
+				}
+				nav ul li {
+					padding-right: 15px;
+					margin-bottom: 15px;
+				
+				}
+				nav a {
+					color: #fc5474;
+					text-decoration: none;
+					font-family: specialfontbold;
+				}
+				
+				/***************
+					SUBNAV
+				****************/
+				#subnav{
+					background: #fc5474;
+					font-family: specialfontbold;
+					padding: 10px 25px;
+				}
+				#subnav li{
+					display: inline-block;
+					padding: 2px 15px;				
+				}
+				#subnav a {
+					color: #c4e86c;
+					text-decoration: none;
+				}
+				
+				/****************
+					CONTENT
+				****************/
+				#tabs {
+					background: #c4e86c;
+					font-family: specialfontbold;
+					padding: 10px 30px;
+				}
+				#tabs li{
+					padding: 2px 15px;
+					display: inline-block;
+				}
+				#tabs a {
+					color: #fc5474;
+					text-decoration: none;
+				}
+				
+				#contentContainer{
+					margin-top: 33px;
+				}
+				
+				#content p {
+					margin-bottom: 14px;
+				}
+				
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="logo"><img src="img/header.jpg" /></div>
+			<div id="navContainer">
+				<nav>
+					<ul>
+						<li><a href="#">Link 01</a></li>
+						<li><a href="#">Link 02</a></li>
+						<li><a href="#">Link 03</a></li>
+						<li><a href="#">Link 04</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			
+			<div id="columnRightContainer">
+				<div id="columnLeftContainer">
+					<div id="colLeft">
+						<div id="subnav">
+							<ul>
+								<li><a href="#">sublink 01</a></li>
+								<li><a href="#">sublink 02</a></li>
+								<li><a href="#">sublink 03</a></li>
+								<li><a href="#">sublink 04</a></li>
+								<li><a href="#">sublink 05</a></li>
+							</ul>
+						</div>
+					</div>	
+					<div id="colRight">
+						<div id="container">
+							<ul id="tabs">
+								<li><span><a href="#">Tab 01</a></span></li>
+								<li><span><a href="#">Tab 02</a></span></li>
+								<li><span><a href="#">Tab 03</a></span></li>
+								<li><span><a href="#">Tab 04</a></span></li>
+							</ul>
+							<div id="contentContainer">
+								<div class="cornerTopLeft">
+									<div class="cornerTopRight">
+										<div class="cornerBottomRight">
+											<div class="cornerBottomLeft">
+												<div class="contentMargin">
+													<div id="content">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas posuere leo, eget posuere velit sollicitudin vitae. Fusce non quam quis metus bibendum semper. Aliquam molestie magna elit, ut condimentum turpis consectetur in. Nulla pellentesque viverra aliquam. Aliquam mattis enim a nulla feugiat, a hendrerit nunc lacinia. Fusce et mauris ac justo posuere rutrum. Vestibulum eget scelerisque est. Pellentesque eleifend, metus ut feugiat sagittis, risus orci aliquet ligula, nec dictum turpis quam ut lacus. Donec pretium tortor vel lorem rutrum commodo a ac lacus. Mauris tincidunt molestie eleifend. Vivamus a bibendum tellus. </p>
+														<p>Donec lacus urna, molestie ornare finibus vitae, euismod sed turpis. Vestibulum vulputate id neque sit amet ultrices. In mollis, nisi nec ornare luctus, risus felis mollis velit, ut vehicula massa urna at velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere sapien ac lacinia placerat. Fusce augue arcu, luctus ut lacus ut, ultricies rhoncus felis. Sed ac lectus vehicula, aliquet ante sed, commodo mauris. Phasellus eget vulputate odio. Etiam ut orci odio. In volutpat dolor quis consequat feugiat. In commodo neque id orci dignissim, elementum eleifend augue sagittis. </p>
+														<p>Curabitur sed luctus tellus. Maecenas feugiat, nisi vitae pretium porttitor, lacus turpis lacinia tellus, quis tincidunt quam sem iaculis odio. Nulla posuere sagittis ipsum, sit amet pulvinar purus accumsan non. Aliquam eget gravida elit, quis ultricies neque. Proin ac mi elit. Nulla aliquet viverra purus at malesuada. Etiam ac enim vel odio sollicitudin sollicitudin eget nec ipsum. </p>
+														<p>Aenean vitae pharetra leo. Sed feugiat molestie sem, nec ullamcorper ipsum faucibus et. Morbi venenatis mi leo, ut tempor urna dignissim at. Vestibulum vitae urna nec ipsum hendrerit aliquet. Vestibulum vel massa vel arcu vulputate facilisis. Ut risus risus, euismod sit amet felis vitae, tincidunt tincidunt quam. Phasellus ac felis quis sem rhoncus ultricies. Nullam feugiat mauris ante, nec elementum dolor tempus vel. Praesent aliquet posuere semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras lacinia ultricies dignissim. </p>
+														<p>Sed venenatis mauris venenatis quam egestas bibendum. Vivamus tincidunt arcu eu dolor euismod, at feugiat nulla pellentesque. Cras vehicula, eros non commodo condimentum, magna elit facilisis arcu, eu mollis ligula lorem non ligula. Aliquam quis efficitur eros. Cras accumsan augue vitae erat viverra sollicitudin. Nulla eget iaculis orci, at vehicula arcu. Aenean rhoncus odio quis efficitur semper. Suspendisse potenti. Curabitur euismod nulla ut ante maximus, in venenatis turpis rhoncus. Integer eu magna convallis, lacinia justo ut, interdum mi. Vivamus eu laoreet magna. Ut interdum dui nec quam egestas, eu cursus ante pulvinar. Nullam lobortis et diam nec gravida. Donec vel arcu eget metus interdum maximus. Nulla iaculis bibendum ligula et accumsan. Nam euismod eros vitae lacus posuere aliquet. </p>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas posuere leo, eget posuere velit sollicitudin vitae. Fusce non quam quis metus bibendum semper. Aliquam molestie magna elit, ut condimentum turpis consectetur in. Nulla pellentesque viverra aliquam. Aliquam mattis enim a nulla feugiat, a hendrerit nunc lacinia. Fusce et mauris ac justo posuere rutrum. Vestibulum eget scelerisque est. Pellentesque eleifend, metus ut feugiat sagittis, risus orci aliquet ligula, nec dictum turpis quam ut lacus. Donec pretium tortor vel lorem rutrum commodo a ac lacus. Mauris tincidunt molestie eleifend. Vivamus a bibendum tellus. </p>
+														<p>Donec lacus urna, molestie ornare finibus vitae, euismod sed turpis. Vestibulum vulputate id neque sit amet ultrices. In mollis, nisi nec ornare luctus, risus felis mollis velit, ut vehicula massa urna at velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere sapien ac lacinia placerat. Fusce augue arcu, luctus ut lacus ut, ultricies rhoncus felis. Sed ac lectus vehicula, aliquet ante sed, commodo mauris. Phasellus eget vulputate odio. Etiam ut orci odio. In volutpat dolor quis consequat feugiat. In commodo neque id orci dignissim, elementum eleifend augue sagittis. </p>
+														<p>Curabitur sed luctus tellus. Maecenas feugiat, nisi vitae pretium porttitor, lacus turpis lacinia tellus, quis tincidunt quam sem iaculis odio. Nulla posuere sagittis ipsum, sit amet pulvinar purus accumsan non. Aliquam eget gravida elit, quis ultricies neque. Proin ac mi elit. Nulla aliquet viverra purus at malesuada. Etiam ac enim vel odio sollicitudin sollicitudin eget nec ipsum. </p>
+														<p>Aenean vitae pharetra leo. Sed feugiat molestie sem, nec ullamcorper ipsum faucibus et. Morbi venenatis mi leo, ut tempor urna dignissim at. Vestibulum vitae urna nec ipsum hendrerit aliquet. Vestibulum vel massa vel arcu vulputate facilisis. Ut risus risus, euismod sit amet felis vitae, tincidunt tincidunt quam. Phasellus ac felis quis sem rhoncus ultricies. Nullam feugiat mauris ante, nec elementum dolor tempus vel. Praesent aliquet posuere semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras lacinia ultricies dignissim. </p>
+														<p>Sed venenatis mauris venenatis quam egestas bibendum. Vivamus tincidunt arcu eu dolor euismod, at feugiat nulla pellentesque. Cras vehicula, eros non commodo condimentum, magna elit facilisis arcu, eu mollis ligula lorem non ligula. Aliquam quis efficitur eros. Cras accumsan augue vitae erat viverra sollicitudin. Nulla eget iaculis orci, at vehicula arcu. Aenean rhoncus odio quis efficitur semper. Suspendisse potenti. Curabitur euismod nulla ut ante maximus, in venenatis turpis rhoncus. Integer eu magna convallis, lacinia justo ut, interdum mi. Vivamus eu laoreet magna. Ut interdum dui nec quam egestas, eu cursus ante pulvinar. Nullam lobortis et diam nec gravida. Donec vel arcu eget metus interdum maximus. Nulla iaculis bibendum ligula et accumsan. Nam euismod eros vitae lacus posuere aliquet. </p>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas posuere leo, eget posuere velit sollicitudin vitae. Fusce non quam quis metus bibendum semper. Aliquam molestie magna elit, ut condimentum turpis consectetur in. Nulla pellentesque viverra aliquam. Aliquam mattis enim a nulla feugiat, a hendrerit nunc lacinia. Fusce et mauris ac justo posuere rutrum. Vestibulum eget scelerisque est. Pellentesque eleifend, metus ut feugiat sagittis, risus orci aliquet ligula, nec dictum turpis quam ut lacus. Donec pretium tortor vel lorem rutrum commodo a ac lacus. Mauris tincidunt molestie eleifend. Vivamus a bibendum tellus. </p>
+														<p>Donec lacus urna, molestie ornare finibus vitae, euismod sed turpis. Vestibulum vulputate id neque sit amet ultrices. In mollis, nisi nec ornare luctus, risus felis mollis velit, ut vehicula massa urna at velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere sapien ac lacinia placerat. Fusce augue arcu, luctus ut lacus ut, ultricies rhoncus felis. Sed ac lectus vehicula, aliquet ante sed, commodo mauris. Phasellus eget vulputate odio. Etiam ut orci odio. In volutpat dolor quis consequat feugiat. In commodo neque id orci dignissim, elementum eleifend augue sagittis. </p>
+														<p>Curabitur sed luctus tellus. Maecenas feugiat, nisi vitae pretium porttitor, lacus turpis lacinia tellus, quis tincidunt quam sem iaculis odio. Nulla posuere sagittis ipsum, sit amet pulvinar purus accumsan non. Aliquam eget gravida elit, quis ultricies neque. Proin ac mi elit. Nulla aliquet viverra purus at malesuada. Etiam ac enim vel odio sollicitudin sollicitudin eget nec ipsum. </p>
+														<p>Aenean vitae pharetra leo. Sed feugiat molestie sem, nec ullamcorper ipsum faucibus et. Morbi venenatis mi leo, ut tempor urna dignissim at. Vestibulum vitae urna nec ipsum hendrerit aliquet. Vestibulum vel massa vel arcu vulputate facilisis. Ut risus risus, euismod sit amet felis vitae, tincidunt tincidunt quam. Phasellus ac felis quis sem rhoncus ultricies. Nullam feugiat mauris ante, nec elementum dolor tempus vel. Praesent aliquet posuere semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras lacinia ultricies dignissim. </p>
+														<p>Sed venenatis mauris venenatis quam egestas bibendum. Vivamus tincidunt arcu eu dolor euismod, at feugiat nulla pellentesque. Cras vehicula, eros non commodo condimentum, magna elit facilisis arcu, eu mollis ligula lorem non ligula. Aliquam quis efficitur eros. Cras accumsan augue vitae erat viverra sollicitudin. Nulla eget iaculis orci, at vehicula arcu. Aenean rhoncus odio quis efficitur semper. Suspendisse potenti. Curabitur euismod nulla ut ante maximus, in venenatis turpis rhoncus. Integer eu magna convallis, lacinia justo ut, interdum mi. Vivamus eu laoreet magna. Ut interdum dui nec quam egestas, eu cursus ante pulvinar. Nullam lobortis et diam nec gravida. Donec vel arcu eget metus interdum maximus. Nulla iaculis bibendum ligula et accumsan. Nam euismod eros vitae lacus posuere aliquet. </p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+			
+		</main>
+	</body>
+</html>

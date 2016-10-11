@@ -1,0 +1,325 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Layout 1 column, Header & Footer</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			@import url('../css/reset.css');
+		</style>
+		<style type="text/css">
+			/* Handle older browser's html 5 support */
+			header, section, footer, aside, nav, main, article, figure {
+			    display: block; 
+			}
+			
+			/* BODY & GENERAL STYLES */
+			html{
+				height: 100%;
+			}
+			body{
+				background: url('../img/dirty_old_shirt.png') repeat top left;
+				color: White;
+				font-family: Arial;
+				height: 100%;
+			}
+			h1{
+				font-size: 25px;
+			}
+			p{
+				margin-bottom: 15px;
+			}
+			
+			/* HEADER */
+			header{
+				background: #9d7793;
+				height: 60px;
+				position: relative;
+			}
+			
+			/* NAVIGATION */
+			nav{
+				float: left;
+				position: absolute;
+				bottom: 0;
+			}
+			nav li{
+				float: left;
+				padding: 5px 20px;
+				background: #949d77;
+			}
+			nav li ul{
+				float: none;
+				display: none;
+				position: absolute;
+			}
+			nav li a{
+				color: White;
+				text-decoration: underline;
+			}
+			nav li a:hover{
+				color: Black;
+			}
+			nav li li {
+				float: none;
+			}
+			nav li li a{
+				display: block;
+			}
+			nav li:hover ul{
+				display: block;
+			}
+			
+			/* MAIN */
+			main{
+				clear: both;
+				min-height: 100%;
+				display: block;
+				margin-top: -60px;
+				margin-bottom: -60px;
+			}
+			#contentContainer{
+				padding: 70px 0;
+			}
+			details{
+				margin-top: 20px;
+				margin-left: 20px;
+			}
+			
+			/* FOOTER */
+			footer{
+				height: 60px;
+				background: #949d77; 
+			}
+			footer ul li{
+				display: inline;
+			}
+			
+		</style>
+		<!--[if lt IE 9]>
+		    <script src="../js/html5shiv.js"></script>
+		<![endif]-->		
+		<script type="text/javascript" src="../js/details.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>This is the header</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a>Link Hover</a>
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Link</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="contentContainer">
+				<menuitem>Hello world</menuitem>
+				<progress value="0.30"></progress>
+				<details title="SHOW MORE CONTENT">
+					<summary>Show more content</summary>
+					<div id="lipsum" class="detailsContent">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Donec ornare, nisi id posuere hendrerit, massa libero semper
+							libero, vel laoreet tortor elit sed libero. Integer sollicitudin
+							quam quis nisl ornare hendrerit. Suspendisse potenti. Integer porta
+							lacinia turpis, eu finibus mauris sagittis ut. Suspendisse potenti.
+							Proin ante elit, facilisis vel consequat sed, fermentum et metus.
+							Phasellus condimentum blandit massa elementum accumsan. Praesent
+							non molestie ligula. Ut vestibulum sapien et leo eleifend, at
+							mattis metus imperdiet.</p>
+						<p>Integer ipsum dolor, iaculis ut quam vel, egestas dictum
+							dolor. Praesent dignissim pellentesque blandit. Cras justo elit,
+							pulvinar semper orci tincidunt, iaculis ultrices mi. Vivamus
+							molestie nulla lectus, eget tincidunt justo vehicula in. Vestibulum
+							blandit ultricies erat, sed volutpat tortor interdum quis. Donec
+							sem mi, venenatis ut mi eget, finibus posuere ipsum. Mauris
+							fermentum lobortis risus, vel ornare purus. Etiam at erat quis dui
+							sodales luctus non at turpis. Phasellus rutrum libero mi, porta
+							mollis dui commodo ultrices. Donec ultricies ligula id diam
+							tristique porta.</p>
+						<p>Praesent bibendum nulla a nisi convallis, eu egestas erat
+							sagittis. Cum sociis natoque penatibus et magnis dis parturient
+							montes, nascetur ridiculus mus. Pellentesque sed arcu vitae lorem
+							finibus eleifend. Sed ac consequat libero. Cum sociis natoque
+							penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							Quisque quis augue magna. Suspendisse vel tortor ex. Donec diam
+							est, tempus a cursus et, tempus vel libero. Phasellus ultricies
+							massa nec est porttitor venenatis.</p>
+						<p>Suspendisse potenti. Phasellus eget sapien maximus, semper
+							risus vitae, lacinia dolor. Vestibulum lobortis ante quis maximus
+							iaculis. Cras vitae lacus at nibh pellentesque molestie in ut nisl.
+							Integer leo nisl, pretium id turpis eget, convallis aliquet massa.
+							Mauris sollicitudin, sem eu rutrum scelerisque, nunc dolor
+							consequat sapien, et rutrum turpis leo sit amet est. Integer dolor
+							arcu, fringilla a tincidunt quis, bibendum at turpis. Vestibulum
+							convallis lorem justo, sed fringilla nulla volutpat eget. Praesent
+							consectetur neque nunc, vitae egestas nulla mattis ut. Etiam tempor
+							nibh eget libero ultricies rutrum. Interdum et malesuada fames ac
+							ante ipsum primis in faucibus. Ut pulvinar sem eu odio ultrices,
+							non cursus ex lacinia. Interdum et malesuada fames ac ante ipsum
+							primis in faucibus. Suspendisse rutrum lectus dui, tincidunt luctus
+							velit efficitur non. Praesent quis facilisis nisl. Nam auctor
+							tortor pellentesque, porta lorem pretium, pharetra velit.</p>
+						<p>Pellentesque finibus in lorem sit amet iaculis. Ut aliquam
+							ante risus, et congue dolor interdum eu. Nunc orci sem, consectetur
+							vestibulum velit sed, varius interdum dolor. Etiam pretium
+							hendrerit nibh, id finibus orci condimentum semper. Nulla sit amet
+							enim sit amet nulla elementum tempor sed in arcu. Aliquam mollis
+							diam consequat magna elementum aliquet. Cras ut tellus ante.
+							Suspendisse quis tortor purus. Morbi vel dapibus sapien, nec
+							volutpat felis. Nunc sed tellus ornare quam ornare rhoncus.</p>
+						<p>Nam convallis purus enim, vitae ultrices magna ultrices
+							pellentesque. Duis purus metus, pharetra vitae semper ac, accumsan
+							eu enim. Phasellus cursus sed massa quis facilisis. Duis posuere
+							neque quis justo aliquet pulvinar. Quisque id ante nisi. Aliquam
+							erat volutpat. Curabitur tincidunt auctor eros et vestibulum. Morbi
+							viverra tempor ipsum at vehicula. Nulla imperdiet mi at ligula
+							pellentesque mollis.</p>
+						<p>Integer vel volutpat lacus. Nam ut aliquam est. Mauris
+							elementum ultricies nisi. Quisque quis auctor lorem. Ut eu interdum
+							metus. Aliquam sit amet sagittis eros. Duis eu erat quis arcu
+							hendrerit luctus. Nunc sit amet enim metus. Suspendisse
+							scelerisque, quam sed dapibus vestibulum, eros ante facilisis nisl,
+							ut tincidunt lectus eros nec orci. Curabitur maximus faucibus
+							feugiat. Nulla tempor neque eget rutrum feugiat. Maecenas at magna
+							augue.</p>
+						<p>Suspendisse sit amet odio sed enim commodo maximus eget eget
+							enim. Pellentesque placerat, turpis et dignissim venenatis, tortor
+							velit efficitur sapien, quis ornare risus justo vel elit. Nunc
+							vestibulum arcu pharetra ipsum molestie vehicula. Nulla lacinia et
+							mauris consectetur vulputate. Donec ac facilisis mauris, id
+							scelerisque magna. Ut ullamcorper, turpis vitae accumsan egestas,
+							metus magna pulvinar augue, ut egestas dolor libero a nunc. Vivamus
+							non diam eget erat varius pulvinar. Cras id gravida risus, nec
+							maximus orci. Nam sed accumsan dui. Nam sit amet egestas lectus, in
+							egestas nulla. Donec imperdiet egestas nisi, eget pretium augue
+							aliquam vel. Sed viverra tortor et auctor placerat. Morbi interdum
+							in ligula eget tristique. Quisque mi ligula, commodo sit amet
+							faucibus at, pellentesque ac augue.</p>
+						<p>Proin ultricies vestibulum ante, ac sodales felis blandit in.
+							Cras faucibus tortor id consectetur consequat. Integer tempus
+							libero ornare luctus tristique. Suspendisse sit amet blandit ipsum,
+							eget venenatis tellus. Praesent ultricies condimentum lorem, a
+							fermentum ex egestas non. Nulla eget augue felis. Quisque nec
+							pellentesque mi. Donec enim arcu, placerat vitae orci sit amet,
+							interdum porta urna. Phasellus mi lacus, aliquam id diam id, ornare
+							porta leo. Quisque risus metus, iaculis sed aliquet ornare,
+							accumsan eget justo. Ut pulvinar mauris vitae nisl tincidunt
+							fringilla. Integer id nulla enim. Curabitur vulputate vel nunc
+							ultricies aliquet. Etiam varius eros eget justo dignissim, ut
+							tempus metus egestas. Donec nisl tortor, fringilla non porttitor
+							in, pretium non magna.</p>
+						<p>Integer vitae finibus ex. Sed lacinia erat id ex pulvinar, at
+							pretium ex feugiat. Interdum et malesuada fames ac ante ipsum
+							primis in faucibus. Curabitur volutpat nisl a volutpat mattis.
+							Proin ultricies sodales odio, ac vestibulum mauris congue at.
+							Nullam pulvinar arcu orci, sit amet tincidunt libero ultricies
+							efficitur. Mauris pretium velit id dolor suscipit laoreet. Aliquam
+							cursus mi sit amet lacus elementum viverra. Maecenas condimentum
+							ligula malesuada cursus sodales. Phasellus consequat turpis at orci
+							cursus vehicula. Nunc vitae sapien eget ex varius euismod et id
+							nulla.</p>
+						<p>Aliquam tincidunt arcu mauris, at lacinia diam suscipit a.
+							Vivamus tincidunt magna quis aliquam laoreet. Mauris posuere nisi
+							at tortor pretium, blandit posuere nibh cursus. Proin non mauris
+							sit amet justo hendrerit sodales at mattis massa. Nullam ultricies
+							fringilla tortor in fringilla. Ut eget tortor quis purus fringilla
+							pretium. Etiam vestibulum, felis nec viverra luctus, ipsum sapien
+							finibus erat, eu ultricies tortor libero eu nunc. Nullam tincidunt
+							elit velit, posuere interdum nisl venenatis at. Suspendisse lacus
+							sapien, accumsan eget euismod in, blandit sit amet mauris. Praesent
+							consectetur urna in malesuada porta. Sed dignissim erat a quam
+							eleifend sagittis. Duis maximus ipsum a consequat ornare.
+							Pellentesque consectetur ex ut diam auctor pulvinar.</p>
+						<p>Mauris finibus, tellus faucibus maximus vulputate, metus
+							mauris lobortis felis, vitae dapibus dui lectus nec quam. Duis
+							luctus urna ut dui tincidunt tempor. Class aptent taciti sociosqu
+							ad litora torquent per conubia nostra, per inceptos himenaeos.
+							Pellentesque habitant morbi tristique senectus et netus et
+							malesuada fames ac turpis egestas. Ut euismod enim facilisis turpis
+							sagittis, eu varius turpis fringilla. Praesent scelerisque blandit
+							maximus. Ut eget orci faucibus, pulvinar felis sed, laoreet tellus.
+							Praesent magna lorem, euismod quis orci id, tincidunt vestibulum
+							est. Nunc placerat enim ac porttitor gravida. Maecenas arcu purus,
+							venenatis in pulvinar sit amet, scelerisque at ante. Curabitur
+							volutpat, odio a efficitur vestibulum, risus tortor egestas enim,
+							consequat eleifend turpis ante ut metus. Nam eu ante nulla. Mauris
+							sagittis ex justo, ac condimentum enim bibendum nec. Sed tincidunt
+							massa efficitur felis lacinia fermentum. Nulla facilisi.</p>
+						<p>Suspendisse scelerisque lobortis purus vitae tempus. Nulla
+							aliquam orci at erat porta, eget eleifend turpis ullamcorper. Cras
+							non erat non turpis accumsan semper. Fusce velit felis, auctor at
+							commodo quis, facilisis at elit. Etiam vitae tellus diam. Sed
+							aliquet arcu nec lectus feugiat varius. Phasellus varius tempus
+							quam, vitae gravida nisi venenatis ac. Cras at lectus placerat,
+							tincidunt mauris vel, suscipit enim. Phasellus aliquet erat sed
+							nibh rhoncus volutpat. Nam neque dolor, ultricies nec lobortis at,
+							tristique dictum mauris. In at est justo. Etiam dictum odio sit
+							amet ex interdum, eu semper augue posuere.</p>
+						<p>Sed commodo ultrices lectus in lacinia. Praesent posuere
+							tellus quis dignissim volutpat. Donec eu magna blandit, aliquet
+							erat quis, ullamcorper justo. Nullam tempus justo massa, sed
+							venenatis tortor consectetur ac. Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Aliquam ut sapien nec nisl fringilla
+							cursus ac vitae velit. Integer blandit rhoncus tellus, at suscipit
+							est faucibus a. Nunc ut urna eu nisl aliquet malesuada. Ut ut
+							tellus ac mi varius ultricies auctor sit amet erat. Vivamus egestas
+							nibh diam, quis dapibus tellus porta vel. Maecenas sit amet commodo
+							massa. Suspendisse id tincidunt sem, et rhoncus metus. Nunc eu
+							velit vel dui ultricies iaculis. Pellentesque habitant morbi
+							tristique senectus et netus et malesuada fames ac turpis egestas.
+							Morbi aliquet nibh risus. Suspendisse quis maximus odio.</p>
+						<p>Aliquam vel semper tellus, sit amet ultrices nunc. Duis
+							porttitor bibendum molestie. Suspendisse semper, sapien non viverra
+							tristique, purus felis mollis dolor, vitae lacinia urna justo vitae
+							turpis. Duis eleifend, quam ac ultrices porttitor, felis ligula
+							luctus massa, non vulputate augue quam pulvinar arcu. Ut vel eros
+							non sapien semper fringilla placerat a orci. Mauris aliquam eros
+							nec nibh sodales, luctus dignissim urna gravida. Maecenas nec
+							libero gravida, lacinia erat eget, semper ex. Sed eget luctus
+							massa. Duis nec lacus sed risus pharetra lobortis. Nullam eu eros
+							vitae justo ornare vehicula porttitor sit amet lorem. Integer
+							tincidunt felis ipsum, eu feugiat massa pellentesque non. Donec
+							sodales metus sed eros vehicula, id dignissim urna efficitur. Morbi
+							tincidunt tellus metus, et euismod erat faucibus ut. Fusce
+							porttitor turpis urna, vehicula luctus nisl varius eget. Ut nec
+							felis vitae lorem porta malesuada at ut nunc.</p>
+						<p>Vestibulum fringilla nulla orci, at aliquam tortor pharetra
+							molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Quisque laoreet ex ante, eget viverra nisi iaculis sed. Donec at
+							sem turpis. Nam eu ornare dolor, vitae elementum felis. Quisque
+							feugiat malesuada iaculis. Maecenas id blandit metus. Fusce vitae
+							enim est. Quisque molestie eu sapien sit amet auctor. Etiam nibh
+							erat, fringilla in scelerisque at, ornare vel nisi. Etiam iaculis
+							sodales dictum.</p>
+						<p>Maecenas id rutrum diam, non mattis lorem. Aliquam quis lorem
+							ac leo iaculis interdum. Mauris ac nulla ut ex tristique rutrum.
+							Proin at felis ullamcorper, vehicula tortor eget, feugiat est. Sed
+							sed eros justo. Ut tincidunt at mi nec facilisis. Maecenas purus
+							erat, auctor vitae elementum bibendum, tristique vitae massa.
+							Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi
+							id auctor lacus. Integer tellus lacus, feugiat in urna nec,
+							accumsan mattis lectus.</p>
+						
+					</div>
+				</details>
+			</div>
+		</main>
+		<footer>
+			<h1>This is the footer</h1>
+			<ul>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
